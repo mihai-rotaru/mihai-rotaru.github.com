@@ -20,6 +20,9 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
+    <link rel="stylesheet" href="css/jquery.ui.core.css">
+    <link rel="stylesheet" href="css/jquery.ui.tabs.css">
+    <link rel="stylesheet" href="css/jquery.ui.theme.css">
     <link rel="stylesheet" href="css/main.css">
 
     <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -36,7 +39,40 @@
 
     <!-- Add your site or application content here -->
     <h1>Mihai Rotaru</h1>
-    <h3>under construction</h3>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="home">
+            <p>Hello there ! This the homepage of Mihai Rotaru. I'm good with web development and C++. Recent graduate, but don't run away before checking out my <a href="#projects" class='toprojects'>projects</a>. 
+            I'm also on <a href="https://github.com/mihai-rotaru">github</a>.</p>
+        </div>
+        <div id="projects">
+            <p><a href="https://github.com/mihai-rotaru/bricka">bricka</a> - a build system based on <a href="http://code.google.com/p/waf/">waf</a> to automate web optimization tasks - such as minification and concatenation.</p>
+            <p><a href="https://github.com/mihai-rotaru/xml-tools-gui">xml-tools-gui</a> - graphical user interface for the <a href="http://xmlstar.sourceforge.net/">XMLStar toolkit</a>. Can be used to check XML files for validity against XSD schemas.</p>
+            <p><a href="https://github.com/mihai-rotaru/MusicCollection">MusicCollection</a> - basic Java application, which can automatically download album artwork.</p>
+            <p><a href="https://github.com/mihai-rotaru/boxdrop">BoxDrop</a> - PHP web app enabling users to upload files for storage and sharing.</p>
+            <p><a href="https://github.com/mihai-rotaru/wf-viz">WorldStats</a> - visualize statistics from <a href="http://data.worldbank.org/">data.worldbank.org</a>. Cross-platform (Windows and Linux) C++ application, with an OpenGL-based user interface.</p>
+            <p><a href="https://github.com/mihai-rotaru/photoshare">PhotoShare</a> - very imaginatively named photo sharing web application. Made with object-oriented PHP, using SCSS and CoffeeScript pre-processing.</p>
+            <p><a href="https://github.com/mihai-rotaru/XML-Blog">XML-Blog</a> - experimental static blogging framework, using XML and Ajax.</p>
+            <p><a href="https://github.com/mihai-rotaru/dangerous-roads/">Dangerous Roads</a> - simple XNA-based game, second year uni project.</p>
+            <p><a href="https://github.com/mihai-rotaru/xmlstar-val-compiler">xmlstar-val-compiler</a> - validate XML files from Vim, using <a href="http://xmlstar.sourceforge.net/">XMLStar toolkit</a>'s <code>val</code> option.
+            <p><a href="https://github.com/mihai-rotaru/mdxTimetable">mdxTimetable</a> - Greasemonkey script to make uni timetables more readable.</p>
+            <p><a href="https://github.com/mihai-rotaru/vim-status-quo">vim-status-quo</a> -  simple status line plugin for vim. It changes according to colorscheme.</p>
+
+        </div>
+        <div id="contact">
+            <p>email: <a href="mailto:mihai.rotaru@gmx.com?Subject=Hello">mihai.rotaru@gmx.com</a></p>
+        </div>
+        <div id="blog">
+            <p>No entries yet.</p>
+        </div>
+    </div>
+
 
 
     <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
@@ -44,6 +80,9 @@
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-ui-1.9.1.min.js"><\/script>')</script>
+    <script src="js/vendor/jquery.ba-hashchange.js"></script>
 
     <!-- scripts concatenated and minified via build script -->
     <script src="js/plugins.js"></script>
