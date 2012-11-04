@@ -2,6 +2,7 @@
 */
 $(function() {
     // adapted from: http://blog.rootsmith.ca/jquery/how-to-make-jquery-ui-tabs-linkable-or-bookmarkable/
+    console.info("Executing...")
     var tabIndex = { 'home' : 0, 'projects' : 1, 'blog' : 2, 'contact' : 3 }
     var re = /#\w+$/;
     var match = re.exec( document.location.toString() );
@@ -30,24 +31,18 @@ $(function() {
 
     $("#tabs").delegate("ul > li > a", "click", function() {
         window.location.hash = $(this).attr("href");
+        hash = window.location.hash;
+        console.info( 'click on a: hash: ' + hash );
         return false;
     });
 
     var tabs = $("#tabs");
     tabs.tabs( { selected: selectedTab } );
-    console.info(tabs)
-
-    tabs.bind( 'tabsshow', function( event, ui ) {
-            var url = document.location.toString();
-            var newurl = url.replace(re, "#" + get_tabindex_str( selectedTab ) );
-            console.info('going to: ' + newurl )
-            document.location = newurl;
-            $("#tabs").tabs( { selected: selectedTab } );
-        });
 
     $(window).bind('hashchange', function(){
     
         var newHash = window.location.hash.substring(1);
+        console.info('hashchange; newHash: ' + newHash );
         
         if (newHash) {
             selectedTab = tabIndex[ newHash ];
