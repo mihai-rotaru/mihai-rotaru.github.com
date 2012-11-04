@@ -34,7 +34,7 @@ $(function() {
     });
 
     var tabs = $("#tabs");
-//    $("#tabs").tabs( { selected: selectedTab } );
+    tabs.tabs( { selected: selectedTab } );
     console.info(tabs)
 
     tabs.bind( 'tabsshow', function( event, ui ) {
